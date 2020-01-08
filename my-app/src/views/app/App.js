@@ -16,7 +16,6 @@ import Shelves from '../shelves/Shelves'
 import Search from '../search/Search'
 
 //import styles
-import 'antd/dist/antd.css';
 import './app.css';
 
 class App extends Component {

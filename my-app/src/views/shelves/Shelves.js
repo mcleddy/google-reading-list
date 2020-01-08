@@ -1,5 +1,5 @@
 import React from 'react'
-import ProTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 import Shelf from '../../components/shelf/Shelf'
 import shelvesConfig from '../../config/shelvesConfig'

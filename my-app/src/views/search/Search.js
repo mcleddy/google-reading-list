@@ -1,11 +1,11 @@
 //dependencies--external
 import React, { Component } from 'react'
-import ProTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import Spin from 'antd/lib/spin';
 import {DebounceInput} from 'react-debounce-input';
 
 import * as BookAPI from '../../api/BooksAPI'
-import { removeWhiteSpace } from '../../utils/string'
+import { removeWhiteSpace } from '../../utils/tests/string'
 import Item from './item/Item'
 
 import './search.css'
@@ -31,7 +31,7 @@ class Search extends Component {
             return;
         }
 
-        this.setState({results: [], isEmpty: false, isLoading: true})
+        this.setState({results: [ ], isEmpty: false, isLoading: true})
 
         BookAPI.search(query)
         .then((response) =>{
