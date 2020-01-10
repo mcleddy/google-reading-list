@@ -6,7 +6,7 @@ import './index.css';
 import App from './views/app/App'
 import registerServiceWorker from './registerServiceWorker'
 ReactDOM.render(
-    <BrowserRouter basename={ProcessingInstruction.env. PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <App />
     </BrowserRouter>,
  document.getElementById('root'));

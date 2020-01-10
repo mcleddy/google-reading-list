@@ -37,11 +37,11 @@ class Search extends Component {
         .then((response) =>{
             if(query !== removeWhiteSpace(this.state.query)) return
 
-            const emptyResponse = !!response.console.error
+            const emptyResponse = !!response.error
             const results = emptyResponse ? [] : response
 
             results.forEach(item => {
-                const myBook = this.props.myBook.find(elem => elem.id === item.id)
+                const myBook = this.props.myBooks.find(elem => elem.id === item.id)
                 if (myBook) item.shelf = myBook.shelf
             })
             this.setState({results, isEmpty: emptyResponse, isLoading: false})
